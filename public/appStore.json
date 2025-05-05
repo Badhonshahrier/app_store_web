@@ -1,0 +1,253 @@
+[
+    {
+        "id": "app001",
+        "name": "Programming Hero",
+        "developer": "Programming Hero Ltd.",
+        "version": "3.2.1",
+        "size": "89MB",
+        "releaseDate": "2020-07-15",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "inAppPurchases": true,
+        "thumbnail": "https://i.ibb.co/sWbb4Z5/programming-hero-thumb.jpg",
+        "banner": "https://i.ibb.co/vj5rT68/programming-hero-banner.jpg",
+        "downloads": 3500000,
+        "category": "Education",
+        "rating": 4.8,
+        "description": "Programming Hero is a fun and interactive way to learn programming.",
+        "features": [
+            "Interactive coding lessons",
+            "Real-world projects",
+            "Gamified learning experience"
+        ],
+        "reviews": [
+            {
+                "user": "coder_nadia",
+                "rating": 5,
+                "comment": "Best app for beginners! The lessons are super easy to follow and engaging."
+            }
+        ]
+    },
+    {
+        "id": "app002",
+        "name": "Forest",
+        "developer": "SeekrTech",
+        "version": "4.62.0",
+        "size": "120MB",
+        "releaseDate": "2016-05-21",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "inAppPurchases": true,
+        "thumbnail": "https://i.ibb.co/m90XVW6/forest-thumb.jpg",
+        "banner": "https://i.ibb.co/JFfRsbS/forest-banner.jpg",
+        "downloads": 10000000,
+        "category": "Productivity",
+        "rating": 4.7,
+        "description": "Forest helps you stay focused by planting trees while you work.",
+        "features": [
+            "Focus timer",
+            "Tree planting game",
+            "Achievements and tracking"
+        ],
+        "reviews": [
+            {
+                "user": "zen_worker",
+                "rating": 5,
+                "comment": "Really helps me stay away from my phone during work hours."
+            }
+        ]
+    },
+    {
+        "id": "app003",
+        "name": "Duolingo",
+        "developer": "Duolingo Inc.",
+        "version": "5.114.4",
+        "size": "96MB",
+        "releaseDate": "2014-06-30",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "inAppPurchases": true,
+        "thumbnail": "https://i.ibb.co/Fndx5ZP/duolingo-thumb.jpg",
+        "banner": "https://i.ibb.co/LtDpQw1/duolingo-banner.jpg",
+        "downloads": 500000000,
+        "category": "Education",
+        "rating": 4.7,
+        "description": "Duolingo makes learning a new language fun and engaging.",
+        "features": [
+            "30+ languages",
+            "Daily streaks and XP",
+            "Speaking, reading, writing and listening practice"
+        ],
+        "reviews": [
+            {
+                "user": "lingo_lover",
+                "rating": 5,
+                "comment": "Learning Spanish has never been this easy and fun!"
+            }
+        ]
+    },
+    {
+        "id": "app004",
+        "name": "Trello",
+        "developer": "Atlassian",
+        "version": "2024.3.1",
+        "size": "51MB",
+        "releaseDate": "2016-01-12",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "inAppPurchases": false,
+        "thumbnail": "https://i.ibb.co/gM7cfxn/trello-thumb.jpg",
+        "banner": "https://i.ibb.co/5MzRsmT/trello-banner.jpg",
+        "downloads": 10000000,
+        "category": "Productivity",
+        "rating": 4.6,
+        "description": "Trello helps you manage projects with boards, lists, and cards.",
+        "features": [
+            "Kanban boards",
+            "Team collaboration",
+            "Custom workflows"
+        ],
+        "reviews": [
+            {
+                "user": "project_junkie",
+                "rating": 4,
+                "comment": "Clean and easy to use, perfect for managing small teams."
+            }
+        ]
+    },
+    {
+        "id": "app005",
+        "name": "Clash Royale",
+        "developer": "Supercell",
+        "version": "3.3186.5",
+        "size": "143MB",
+        "releaseDate": "2016-03-02",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "inAppPurchases": true,
+        "thumbnail": "https://i.ibb.co/xFVv2Dz/clash-royale-thumb.jpg",
+        "banner": "https://i.ibb.co/V0phC4c/clash-royale-banner.jpg",
+        "downloads": 100000000,
+        "category": "Gaming",
+        "rating": 4.5,
+        "description": "Real-time strategy game featuring your favorite Clash characters.",
+        "features": [
+            "Multiplayer battles",
+            "Clan wars",
+            "Card collection and upgrades"
+        ],
+        "reviews": [
+            {
+                "user": "royale_king",
+                "rating": 5,
+                "comment": "Addictive and strategic! Love the quick match format."
+            }
+        ]
+    },
+    {
+        "id": "app006",
+        "name": "Notion",
+        "developer": "Notion Labs Inc.",
+        "version": "0.6.46",
+        "size": "62MB",
+        "releaseDate": "2019-03-21",
+        "platforms": [
+            "Android",
+            "iOS",
+            "Windows",
+            "macOS"
+        ],
+        "inAppPurchases": true,
+        "thumbnail": "https://i.ibb.co/XVZwscT/notion-thumb.jpg",
+        "banner": "https://i.ibb.co/fdpNVFz/notion-banner.jpg",
+        "downloads": 20000000,
+        "category": "Productivity",
+        "rating": 4.7,
+        "description": "All-in-one workspace for notes, tasks, databases, and collaboration.",
+        "features": [
+            "Customizable pages",
+            "Database support",
+            "Team collaboration"
+        ],
+        "reviews": [
+            {
+                "user": "planner_guru",
+                "rating": 5,
+                "comment": "I use this for everything from journaling to work documentation!"
+            }
+        ]
+    },
+    {
+        "id": "app007",
+        "name": "Kahoot!",
+        "developer": "Kahoot! AS",
+        "version": "5.10.0",
+        "size": "110MB",
+        "releaseDate": "2016-10-10",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "inAppPurchases": true,
+        "thumbnail": "https://i.ibb.co/3r8D3wK/kahoot-thumb.jpg",
+        "banner": "https://i.ibb.co/7Jdc2Kt/kahoot-banner.jpg",
+        "downloads": 100000000,
+        "category": "Education",
+        "rating": 4.6,
+        "description": "Live quizzes and interactive trivia for schools, teams, and families.",
+        "features": [
+            "Create & host quizzes",
+            "Join live games",
+            "Remote learning support"
+        ],
+        "reviews": [
+            {
+                "user": "quizmaster123",
+                "rating": 4.5,
+                "comment": "My students love this during revision sessions!"
+            }
+        ]
+    },
+    {
+        "id": "app008",
+        "name": "Among Us",
+        "developer": "Innersloth LLC",
+        "version": "2024.3.5",
+        "size": "182MB",
+        "releaseDate": "2018-06-15",
+        "platforms": [
+            "Android",
+            "iOS",
+            "PC"
+        ],
+        "inAppPurchases": true,
+        "thumbnail": "https://i.ibb.co/7Yvyyg6/among-us-thumb.jpg",
+        "banner": "https://i.ibb.co/TmH3rY2/among-us-banner.jpg",
+        "downloads": 500000000,
+        "category": "Gaming",
+        "rating": 4.4,
+        "description": "A multiplayer party game of teamwork and betrayal.",
+        "features": [
+            "Crewmate vs Impostor gameplay",
+            "Customizable characters",
+            "Voice/text chat support"
+        ],
+        "reviews": [
+            {
+                "user": "impostor_mike",
+                "rating": 5,
+                "comment": "So much fun playing with friends! Great for parties."
+            }
+        ]
+    }
+]

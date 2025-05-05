@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
+import { useLoaderData } from "react-router";
+import CategoryApps from "../Components/CategoryApps";
 
 const Home = () => {
-    return (
-        <div className='min-h-screen bg-amber-300'>
-            <h1>This is HomePage</h1>
-        </div>
-    );
+  const data = useLoaderData();
+
+  return (
+    <div className="min-h-screen bg-amber-300">
+      {data.map((singleData) => (
+        <CategoryApps singleData={singleData}></CategoryApps>
+      ))}
+    </div>
+  );
 };
 
 export default Home;

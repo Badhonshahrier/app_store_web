@@ -1,11 +1,23 @@
-import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { Link } from "react-router";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase.init";
-
+import { Link, useNavigate } from "react-router";
+import { use } from "react";
+import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../Provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 const Register = () => {
+    const navigate=useNavigate()
+  const { creatUser, setUser, googleSignIn } = use(AuthContext);
+  const handleGoggleRegister = () => {
+    googleSignIn()
+      .then((result) => {
+        navigate("/login")
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -13,11 +25,33 @@ const Register = () => {
     const photo = e.target.photo.value;
     const password = e.target.password.value;
 
-    console.log({ name, email, photo, password });
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const isLengthValid = password.length >= 6;
 
-    createUserWithEmailAndPassword(auth, email, password)
+    if (!hasUpperCase) {
+      toast.error("Password must contain at least one uppercase letter.");
+      return;
+    }
+
+    if (!hasLowerCase) {
+      toast.error("Password must contain at least one lowercase letter.");
+      return;
+    }
+
+    if (!isLengthValid) {
+      toast.error("Password must be at least 6 characters long.");
+      return;
+    }
+
+    console.log({ name, email, photo, password });
+    creatUser(email, password)
       .then((result) => {
-        console.log(result);
+        navigate("/login")
+        const user = result.user;
+
+        console.log(user);
+        setUser(user);
       })
       .catch((error) => {
         console.log(error);
@@ -26,11 +60,14 @@ const Register = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-amber-200">
+      <div className="bg-amber-100">
         <Navbar></Navbar>
-        <div className="card bg-base-100 mx-auto  max-w-sm mt-30 shadow-2xl">
-          <div className="card-body">
-            <form onSubmit={handleRegister} className="fieldset">
+        <div className="card bg-base-100 mx-auto max-w-sm my-20 shadow-2xl">
+          <div className="card-body ">
+            <h1 className="text-center font-bold text-2xl text-teal-400">
+              Register Here!
+            </h1>
+            <form onSubmit={handleRegister} className="fieldset ">
               <label className="label text-xl font-bold">Name</label>
               <input
                 type="text"
@@ -59,6 +96,17 @@ const Register = () => {
                 className="input"
                 placeholder="Password"
               />
+              <label className="label font-bold text-xl">
+                Login with Google
+              </label>
+              <button
+                onClick={handleGoggleRegister}
+                type="submit"
+                className="btn border-black hover:bg-amber-300"
+              >
+                <FcGoogle size={20} />
+                Google Login
+              </button>
               <p className="font-bold text-center pt-4">
                 Already have an account?{" "}
                 <Link to="/login">
@@ -75,6 +123,7 @@ const Register = () => {
         </div>
       </div>
       <Footer></Footer>
+      <ToastContainer />
     </>
   );
 };

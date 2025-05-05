@@ -1,8 +1,10 @@
-import React from "react";
+import React, { use } from "react";
 import NavbarLogo from "../assets/farhat-altaf-2X1CbJ8kVL0-unsplash.jpg";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = use(AuthContext);
   return (
     <div className="navbar bg-base-200 shadow-sm ">
       <div className="navbar-start">
@@ -53,11 +55,29 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login">
-          <p className="btn p-0 px-7 rounded-2xl text-xl font-bold bg-amber-400 hover:bg-green-500">
-            Login
-          </p>
-        </Link>
+        {user ? (
+          <div className="flex items-center space-x-3">
+            <div
+              className="tooltip tooltip-bottom"
+              data-tip={user.displayName ? user.displayName : user.email}
+            >
+              <img
+                src="https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg"
+                alt="profile"
+                className="w-10 h-10 rounded-full object-cover"
+              />
+            </div>
+            <button className="btn p-0 px-7 rounded-2xl text-xl font-bold bg-amber-400 hover:bg-green-500">
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="btn p-0 px-7 rounded-2xl text-xl font-bold bg-amber-400 hover:bg-green-500">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

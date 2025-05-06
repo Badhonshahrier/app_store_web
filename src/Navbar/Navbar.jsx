@@ -7,7 +7,7 @@ const Navbar = () => {
   const { user } = use(AuthContext);
   return (
    <div className="bg-base-200">
-     <div className="navbar  w-11/12 mx-auto shadow-sm ">
+     <div className="navbar w-11/12 mx-auto shadow-sm ">
       <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className=" lg:hidden">

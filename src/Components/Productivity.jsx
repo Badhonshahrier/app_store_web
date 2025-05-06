@@ -2,6 +2,7 @@ import React from "react";
 import { FaRegStar } from "react-icons/fa";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Productivity = ({ data }) => {
   const productivityApps = data.filter(
@@ -15,6 +16,7 @@ const Productivity = ({ data }) => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {productivityApps.map((app) => (
+         <Link to={`/app-details/${app.id}`}>
           <div
             key={app.id}
             className="card bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
@@ -41,6 +43,7 @@ p-4 shadow rounded-2xl"
               </p>
             </div>
           </div>
+         </Link>
         ))}
       </div>
     </div>

@@ -3,14 +3,21 @@ import React from "react";
 const Treanding = ({ data }) => {
   const trendingApps = data
     .filter((app) => app.isTrending === true)
-    .sort((a, b) => a.rating - b.rating);
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 4);
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4 text-red-600">🔥 Trending Apps</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="p-6 w-11/12 mx-auto">
+      <h2 className="text-4xl bg-base-300 p-6 rounded-3xl text-center font-bold mb-4 text-red-600">
+        {" "}
+        Trending Apps
+      </h2>
+      <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {trendingApps.map((app) => (
-          <div key={app.id} className="card bg-white p-4 shadow rounded">
+          <div
+            key={app.id}
+            className="card bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 p-4 shadow rounded-2xl"
+          >
             <img
               src={app.thumbnail}
               alt={app.name}
@@ -18,7 +25,7 @@ const Treanding = ({ data }) => {
             />
             <h3 className="text-xl font-semibold">{app.name}</h3>
             <p>⭐ {app.rating}</p>
-            <p>📥 {app.downloads}</p>
+            <p>📥 {app.downloads.toLocaleString()}</p>
           </div>
         ))}
       </div>

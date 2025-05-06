@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 
 const Slider = () => {
   const images = [
-    "https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp",
-    "https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp",
-    "https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp",
-    "https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp",
+    "https://i.ibb.co.com/QvVCcFr3/programing-hero.png",
+    "https://i.ibb.co.com/TB2z4WJP/forest.png",
+    "https://i.ibb.co.com/Myj8NJ8X/Duolingo-AIM-1024x576.jpg",
+    "https://i.ibb.co.com/gbp88jwD/notion.png",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -19,7 +19,7 @@ const Slider = () => {
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-lg">
+    <div className="relative w-11/12 mx-auto h-[500px] mt-10 overflow-hidden rounded-2xl shadow-lg">
       <img
         src={images[current]}
         alt={`Slide ${current + 1}`}

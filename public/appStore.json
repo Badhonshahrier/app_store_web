@@ -10,12 +10,12 @@
             "Android",
             "iOS"
         ],
-        "inAppPurchases": true,
-        "thumbnail": "https://i.ibb.co/sWbb4Z5/programming-hero-thumb.jpg",
+        "thumbnail": "https://i.ibb.co.com/QvVCcFr3/programing-hero.png",
         "banner": "https://i.ibb.co/vj5rT68/programming-hero-banner.jpg",
         "downloads": 3500000,
         "category": "Education",
         "rating": 4.8,
+        "isTrending": true,
         "description": "Programming Hero is a fun and interactive way to learn programming.",
         "features": [
             "Interactive coding lessons",
@@ -41,12 +41,12 @@
             "Android",
             "iOS"
         ],
-        "inAppPurchases": true,
-        "thumbnail": "https://i.ibb.co/m90XVW6/forest-thumb.jpg",
+        "thumbnail": "https://i.ibb.co.com/TB2z4WJP/forest.png",
         "banner": "https://i.ibb.co/JFfRsbS/forest-banner.jpg",
         "downloads": 10000000,
         "category": "Productivity",
         "rating": 4.7,
+        "isTrending": true,
         "description": "Forest helps you stay focused by planting trees while you work.",
         "features": [
             "Focus timer",
@@ -72,12 +72,12 @@
             "Android",
             "iOS"
         ],
-        "inAppPurchases": true,
-        "thumbnail": "https://i.ibb.co/Fndx5ZP/duolingo-thumb.jpg",
+        "thumbnail": "https://i.ibb.co.com/Myj8NJ8X/Duolingo-AIM-1024x576.jpg",
         "banner": "https://i.ibb.co/LtDpQw1/duolingo-banner.jpg",
         "downloads": 500000000,
         "category": "Education",
         "rating": 4.7,
+        "isTrending": true,
         "description": "Duolingo makes learning a new language fun and engaging.",
         "features": [
             "30+ languages",
@@ -103,12 +103,12 @@
             "Android",
             "iOS"
         ],
-        "inAppPurchases": false,
-        "thumbnail": "https://i.ibb.co/gM7cfxn/trello-thumb.jpg",
+        "thumbnail": "https://i.ibb.co.com/whBT8WdR/trello-f4hg.png",
         "banner": "https://i.ibb.co/5MzRsmT/trello-banner.jpg",
         "downloads": 10000000,
         "category": "Productivity",
         "rating": 4.6,
+        "isTrending": false,
         "description": "Trello helps you manage projects with boards, lists, and cards.",
         "features": [
             "Kanban boards",
@@ -120,37 +120,6 @@
                 "user": "project_junkie",
                 "rating": 4,
                 "comment": "Clean and easy to use, perfect for managing small teams."
-            }
-        ]
-    },
-    {
-        "id": "app005",
-        "name": "Clash Royale",
-        "developer": "Supercell",
-        "version": "3.3186.5",
-        "size": "143MB",
-        "releaseDate": "2016-03-02",
-        "platforms": [
-            "Android",
-            "iOS"
-        ],
-        "inAppPurchases": true,
-        "thumbnail": "https://i.ibb.co/xFVv2Dz/clash-royale-thumb.jpg",
-        "banner": "https://i.ibb.co/V0phC4c/clash-royale-banner.jpg",
-        "downloads": 100000000,
-        "category": "Gaming",
-        "rating": 4.5,
-        "description": "Real-time strategy game featuring your favorite Clash characters.",
-        "features": [
-            "Multiplayer battles",
-            "Clan wars",
-            "Card collection and upgrades"
-        ],
-        "reviews": [
-            {
-                "user": "royale_king",
-                "rating": 5,
-                "comment": "Addictive and strategic! Love the quick match format."
             }
         ]
     },
@@ -167,12 +136,12 @@
             "Windows",
             "macOS"
         ],
-        "inAppPurchases": true,
-        "thumbnail": "https://i.ibb.co/XVZwscT/notion-thumb.jpg",
+        "thumbnail": "https://i.ibb.co.com/gbp88jwD/notion.png",
         "banner": "https://i.ibb.co/fdpNVFz/notion-banner.jpg",
         "downloads": 20000000,
         "category": "Productivity",
         "rating": 4.7,
+        "isTrending": true,
         "description": "All-in-one workspace for notes, tasks, databases, and collaboration.",
         "features": [
             "Customizable pages",
@@ -198,12 +167,12 @@
             "Android",
             "iOS"
         ],
-        "inAppPurchases": true,
-        "thumbnail": "https://i.ibb.co/3r8D3wK/kahoot-thumb.jpg",
+        "thumbnail": "https://i.ibb.co.com/3mXkpfXs/kahoot.jpg",
         "banner": "https://i.ibb.co/7Jdc2Kt/kahoot-banner.jpg",
         "downloads": 100000000,
         "category": "Education",
         "rating": 4.6,
+        "isTrending": false,
         "description": "Live quizzes and interactive trivia for schools, teams, and families.",
         "features": [
             "Create & host quizzes",
@@ -220,33 +189,188 @@
     },
     {
         "id": "app008",
-        "name": "Among Us",
-        "developer": "Innersloth LLC",
-        "version": "2024.3.5",
-        "size": "182MB",
-        "releaseDate": "2018-06-15",
+        "name": "MyFitnessPal",
+        "developer": "Under Armour",
+        "version": "22.3.5",
+        "size": "80MB",
+        "releaseDate": "2012-02-01",
         "platforms": [
             "Android",
-            "iOS",
-            "PC"
+            "iOS"
         ],
-        "inAppPurchases": true,
-        "thumbnail": "https://i.ibb.co/7Yvyyg6/among-us-thumb.jpg",
-        "banner": "https://i.ibb.co/TmH3rY2/among-us-banner.jpg",
-        "downloads": 500000000,
-        "category": "Gaming",
+        "thumbnail": "https://i.ibb.co.com/4wLtZCCW/Myfitness-Pal-Logo-scaled.jpg",
+        "banner": "https://i.ibb.co/3cTfzNj/myfitnesspal-banner.jpg",
+        "downloads": 100000000,
+        "category": "Healthcare",
         "rating": 4.4,
-        "description": "A multiplayer party game of teamwork and betrayal.",
+        "isTrending": true,
+        "description": "Track your calories, log food, and stay healthy with MyFitnessPal.",
         "features": [
-            "Crewmate vs Impostor gameplay",
-            "Customizable characters",
-            "Voice/text chat support"
+            "Calorie counter",
+            "Nutrition tracker",
+            "Exercise diary"
         ],
         "reviews": [
             {
-                "user": "impostor_mike",
+                "user": "fit_jane",
+                "rating": 4.5,
+                "comment": "Keeps me on track with my diet goals every day!"
+            }
+        ]
+    },
+    {
+        "id": "app009",
+        "name": "Headspace",
+        "developer": "Headspace Inc.",
+        "version": "12.15.0",
+        "size": "91MB",
+        "releaseDate": "2014-01-15",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "thumbnail": "https://i.ibb.co.com/6J1jT0SV/Headspace-Share.png",
+        "banner": "https://i.ibb.co/5Y9dV0z/headspace-banner.jpg",
+        "downloads": 70000000,
+        "category": "Healthcare",
+        "rating": 4.6,
+        "isTrending": false,
+        "description": "Meditation and sleep support to improve your mental well-being.",
+        "features": [
+            "Guided meditation",
+            "Sleep sounds",
+            "Stress relief programs"
+        ],
+        "reviews": [
+            {
+                "user": "calm_mind",
                 "rating": 5,
-                "comment": "So much fun playing with friends! Great for parties."
+                "comment": "Really helps me fall asleep and feel relaxed during stressful days."
+            }
+        ]
+    },
+    {
+        "id": "app011",
+        "name": "Todoist",
+        "developer": "Doist Inc.",
+        "version": "v10473",
+        "size": "35MB",
+        "releaseDate": "2012-01-04",
+        "platforms": [
+            "Android",
+            "iOS",
+            "Web"
+        ],
+        "thumbnail": "https://i.ibb.co.com/RJZFNFd/todoist.webp",
+        "banner": "https://i.ibb.co/album/todoist-banner.jpg",
+        "downloads": 30000000,
+        "category": "Productivity",
+        "rating": 4.8,
+        "isTrending": true,
+        "description": "Task manager and to-do list app to organize your life.",
+        "features": [
+            "Task scheduling",
+            "Labels and filters",
+            "Team collaboration"
+        ],
+        "reviews": [
+            {
+                "user": "daily_planner",
+                "rating": 5,
+                "comment": "Keeps my day structured and productive!"
+            }
+        ]
+    },
+    {
+        "id": "app012",
+        "name": "Khan Academy",
+        "developer": "Khan Academy",
+        "version": "7.3.1",
+        "size": "60MB",
+        "releaseDate": "2015-09-14",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "thumbnail": "https://i.ibb.co.com/HLvj6Dzv/Khan-Academy-Blog-Header.webp",
+        "banner": "https://i.ibb.co/album/khan-banner.jpg",
+        "downloads": 50000000,
+        "category": "Education",
+        "rating": 4.9,
+        "isTrending": true,
+        "description": "Free world-class education for anyone, anywhere.",
+        "features": [
+            "Video lessons",
+            "Practice exercises",
+            "Progress tracking"
+        ],
+        "reviews": [
+            {
+                "user": "student_raj",
+                "rating": 5,
+                "comment": "This app is a game-changer for self-learners."
+            }
+        ]
+    },
+    {
+        "id": "app013",
+        "name": "Calm",
+        "developer": "Calm.com, Inc.",
+        "version": "6.29.1",
+        "size": "107MB",
+        "releaseDate": "2016-02-02",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "thumbnail": "https://i.ibb.co.com/N6L5s7XK/clam.png",
+        "banner": "https://i.ibb.co/album/calm-banner.jpg",
+        "downloads": 80000000,
+        "category": "Healthcare",
+        "rating": 4.8,
+        "isTrending": true,
+        "description": "Sleep, meditation and relaxation all in one app.",
+        "features": [
+            "Sleep stories",
+            "Guided meditations",
+            "Music for focus"
+        ],
+        "reviews": [
+            {
+                "user": "peaceful_soul",
+                "rating": 5,
+                "comment": "A must-have for anyone looking to improve mental health."
+            }
+        ]
+    },
+    {
+        "id": "app014",
+        "name": "FitOn",
+        "developer": "FitOn Inc.",
+        "version": "5.3.2",
+        "size": "80MB",
+        "releaseDate": "2019-07-10",
+        "platforms": [
+            "Android",
+            "iOS"
+        ],
+        "thumbnail": "https://i.ibb.co.com/GQ9CMKLW/fiton.png",
+        "banner": "https://i.ibb.co/album/fiton-banner.jpg",
+        "downloads": 20000000,
+        "category": "Healthcare",
+        "rating": 4.7,
+        "isTrending": true,
+        "description": "Home workouts and fitness plans from celebrity trainers.",
+        "features": [
+            "Personalized plans",
+            "No equipment needed",
+            "Live classes"
+        ],
+        "reviews": [
+            {
+                "user": "home_gym_user",
+                "rating": 4.8,
+                "comment": "So convenient and motivating for home workouts!"
             }
         ]
     }

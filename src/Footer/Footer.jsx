@@ -4,7 +4,7 @@ import footerLogo from "../assets/farhat-altaf-2X1CbJ8kVL0-unsplash.jpg"
 const Footer = () => {
   return (
     <footer className="bg-base-300 text-white pt-10 pb-5">
-      <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-center md:text-left">
+      <div className="w-11/12 ml-20 mx-auto px-4 grid md:grid-cols-3 gap-8 ">
         <div>
           <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
             <img
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 className="text-lg font-semibold text-green-500 mb-3">Follow Us</h2>
-          <div className="flex justify-center md:justify-start gap-4 text-xl text-blue-400">
+          <div className="flex gap-4 text-xl text-blue-400">
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
               <FaFacebook className="hover:text-white transition" />
             </a>

@@ -1,16 +1,22 @@
 import React from "react";
 import { useLoaderData } from "react-router";
-import CategoryApps from "../Components/CategoryApps";
+import Slider from "../Components/Slider/Slider";
+import Productivity from "../Components/Productivity";
+import Health from "../Components/health";
+import Education from "../Components/Education";
+import Treanding from "../Components/Treanding";
 
 const Home = () => {
   const data = useLoaderData();
 
   return (
-    <div className="min-h-screen bg-amber-300">
-      {data.map((singleData) => (
-        <CategoryApps singleData={singleData}></CategoryApps>
-      ))}
-    </div>
+    <>
+      <Slider></Slider>
+      <Treanding data={data}></Treanding>
+      <Productivity data={data}></Productivity>
+      <Health data={data}></Health>
+      <Education data={data}></Education>
+    </>
   );
 };
 

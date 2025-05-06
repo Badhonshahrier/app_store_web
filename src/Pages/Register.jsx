@@ -6,12 +6,12 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 const Register = () => {
-    const navigate=useNavigate()
-  const { creatUser, setUser, googleSignIn } = use(AuthContext);
+  const navigate = useNavigate();
+  const { creatUser, setUser, googleSignIn, userProfile } = use(AuthContext);
   const handleGoggleRegister = () => {
     googleSignIn()
       .then((result) => {
-        navigate("/login")
+        navigate("/login");
         console.log(result);
       })
       .catch((error) => {
@@ -47,11 +47,20 @@ const Register = () => {
     console.log({ name, email, photo, password });
     creatUser(email, password)
       .then((result) => {
-        navigate("/login")
+        navigate("/login");
         const user = result.user;
 
         console.log(user);
-        setUser(user);
+        userProfile({
+          displayName: name,
+          photoURL: photo,
+        }).then(() => {
+          setUser({
+            ...user,
+            displayName: name,
+            photoURL: photo,
+          });
+        });
       })
       .catch((error) => {
         console.log(error);

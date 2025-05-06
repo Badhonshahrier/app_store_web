@@ -62,7 +62,7 @@ const Navbar = () => {
               data-tip={user.displayName ? user.displayName : user.email}
             >
               <img
-                src="https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg"
+                src={user? user.photoURL: ""}
                 alt="profile"
                 className="w-10 h-10 rounded-full object-cover"
               />

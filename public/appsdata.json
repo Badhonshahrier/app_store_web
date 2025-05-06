@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "TaskMaster",
+        "category": "Productivity",
+        "rating": 4.6,
+        "downloads": "750K+",
+        "thumbnail": "https://i.ibb.co.com/5W8BrQJf/mariia-shalabaieva-TZBo-Ra-ASr74-unsplash-1.jpg",
+        "isTrending": true
+    },
+    {
+        "id": 2,
+        "name": "QuickNotes",
+        "category": "Productivity",
+        "rating": 4.5,
+        "downloads": "900K+",
+        "thumbnail": "https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg",
+        "isTrending": false
+    },
+    {
+        "id": 3,
+        "name": "HealthFirst",
+        "category": "Health",
+        "rating": 4.9,
+        "downloads": "2M+",
+        "thumbnail": "https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg",
+        "isTrending": true
+    },
+    {
+        "id": 4,
+        "name": "FitTrack",
+        "category": "Health",
+        "rating": 4.7,
+        "downloads": "1.2M+",
+        "thumbnail": "https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg",
+        "isTrending": false
+    },
+    {
+        "id": 5,
+        "name": "YogaZen",
+        "category": "Health",
+        "rating": 4.6,
+        "downloads": "1M+",
+        "thumbnail": "https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg",
+        "isTrending": true
+    },
+    {
+        "id": 6,
+        "name": "EduSmart",
+        "category": "Education",
+        "rating": 4.8,
+        "downloads": "3M+",
+        "thumbnail": "https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg",
+        "isTrending": false
+    },
+    {
+        "id": 7,
+        "name": "BrainTrain",
+        "category": "Education",
+        "rating": 4.6,
+        "downloads": "1.7M+",
+        "thumbnail": "https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg",
+        "isTrending": true
+    },
+    {
+        "id": 8,
+        "name": "StudyPal",
+        "category": "Education",
+        "rating": 4.5,
+        "downloads": "1.4M+",
+        "thumbnail": "https://i.ibb.co.com/gbXzVJxc/brooke-balentine-Wy-HC6cz-Lo-U0-unsplash.jpg",
+        "isTrending": false
+    }
+]

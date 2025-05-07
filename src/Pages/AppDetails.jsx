@@ -1,11 +1,13 @@
-import React from "react";
+import React, { use } from "react";
 import { useParams, useLoaderData } from "react-router";
+import ReviewSection from "../Components/ReviewSection";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const AppDetails = () => {
+  const {user}=use(AuthContext)
   const { id } = useParams();
   const data = useLoaderData();
-
-  const app = data.find((item) => item.id === id);
+const app = data.find((item) => item.id === id);
 
   const {
     name,
@@ -36,9 +38,13 @@ const AppDetails = () => {
         </div>
       </div>
 
-      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-        Install
-      </button>
+     {
+      user? <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+      Install
+    </button>: <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+      Uninstall
+    </button>
+     }
 
       <div>
         <h2 className="text-2xl font-semibold mt-6 mb-2">Description</h2>
@@ -58,15 +64,7 @@ const AppDetails = () => {
         <h2 className="text-2xl font-semibold mt-6 mb-2">User Reviews</h2>
         <div className="space-y-4">
           {reviews && reviews.length > 0 ? (
-            reviews.map((review, index) => (
-              <div
-                key={index}
-                className="border p-4 rounded-lg shadow-sm bg-gray-50"
-              >
-                <p className="font-semibold">{review.user}</p>
-                <p>Rating: {review.rating}</p>
-                <p className="text-gray-700">{review.comment}</p>
-              </div>
+            reviews.map(() => (<ReviewSection></ReviewSection>
             ))
           ) : (
             <p className="text-gray-500">No reviews yet.</p>
@@ -78,4 +76,7 @@ const AppDetails = () => {
 };
 
 export default AppDetails;
+
+
+
 

@@ -16,6 +16,13 @@ export const router = createBrowserRouter([
         index: true,
         Component: Home,
         loader: () => fetch("/appStore.json"),
+        hydrateFallbackElement: (
+          <div className="text-center">
+            <span className="loading loading-spinner loading-xl"></span>
+            <span className="loading loading-spinner loading-xl"></span>
+            <span className="loading loading-spinner loading-xl"></span>
+          </div>
+        ),
       },
       {
         path: "/app-details/:id",
@@ -37,7 +44,7 @@ export const router = createBrowserRouter([
     Component: Profile,
   },
   {
-    path:"/*",
-    Component:NotFound,
+    path: "/*",
+    Component: NotFound,
   },
 ]);

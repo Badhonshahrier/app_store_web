@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 const Education = ({ data }) => {
   const educationApps = data.filter((app) => app.category === "Education");
@@ -22,9 +25,9 @@ const Education = ({ data }) => {
                 alt={app.name}
                 className="h-40 w-full object-cover rounded mb-2"
               />
-              <h3 className="text-xl font-semibold">{app.name}</h3>
-              <p>⭐ {app.rating}</p>
-              <p>📥 {app.downloads}</p>
+              <h3 className="text-xl flex items-center gap-1 font-semibold"><FaArrowCircleRight />{app.name}</h3>
+              <p className="flex items-center gap-1"><FaStar color="gold" size={20}/> {app.rating}</p>
+              <p className="flex items-center gap-1"><FaCloudDownloadAlt size={20} color="red" /> {app.downloads}</p>
             </div>
           </Link>
         ))}

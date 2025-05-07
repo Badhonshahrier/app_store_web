@@ -40,19 +40,28 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-green-500 font-bold" : "text-lg font-medium"
+              isActive ? "text-blue-500 underline text-lg font-bold" : "text-lg font-bold"
             }
           >
             <li>Apps</li>
           </NavLink>
-          <NavLink
+          {
+            user?<NavLink
             to="/profile"
             className={({ isActive }) =>
-              isActive ? "text-green-500 font-bold" : "text-lg font-medium"
+              isActive ? "text-blue-500 underline text-lg font-bold" : "text-lg font-bold"
+            }
+          >
+            <li>My Profile</li>
+          </NavLink>:<NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive ? "text-blue-500 underline text-lg font-bold" : "text-lg font-bold"
             }
           >
             <li>My Profile</li>
           </NavLink>
+          }
         </ul>
       </div>
       <div className="navbar-end">

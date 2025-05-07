@@ -1,6 +1,8 @@
 import React from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { Link } from "react-router";
+import { FaStar } from "react-icons/fa";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 const Health = ({ data }) => {
   const healthApps = data.filter((app) => app.category === "Healthcare");
@@ -18,9 +20,9 @@ p-4 shadow rounded-2xl transition-transform hover:scale-105 cursor-pointer">
               alt={app.name}
               className="h-40 w-full object-cover rounded mb-2"
             />
-            <h3 className="text-xl font-semibold">{app.name}</h3>
-            <p>⭐ {app.rating}</p>
-            <p>📥 {app.downloads}</p>
+            <h3 className="text-xl flex items-center gap-1 font-semibold"><FaArrowCircleRight />{app.name}</h3>
+            <p className="flex items-center gap-1"><FaStar color="gold" size={20} /> {app.rating}</p>
+            <p className="flex items-center gap-1"><FaCloudDownloadAlt size={20} color="red" /> {app.downloads}</p>
           </div>
           </Link>
         ))}

@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-10">
           <NavLink
-            to=""
+            to="/"
             className={({ isActive }) =>
               isActive ? "text-green-500 font-bold" : "text-lg font-medium"
             }
@@ -46,7 +46,7 @@ const Navbar = () => {
             <li>Apps</li>
           </NavLink>
           <NavLink
-            to=""
+            to="/profile"
             className={({ isActive }) =>
               isActive ? "text-green-500 font-bold" : "text-lg font-medium"
             }

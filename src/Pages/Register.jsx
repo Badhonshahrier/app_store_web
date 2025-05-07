@@ -11,6 +11,7 @@ const Register = () => {
   const handleGoggleRegister = () => {
     googleSignIn()
       .then((result) => {
+        toast.success("Google sign in successful!")
         navigate("/login");
         console.log(result);
       })
@@ -110,7 +111,7 @@ const Register = () => {
               </label>
               <button
                 onClick={handleGoggleRegister}
-                type="submit"
+                type="button"
                 className="btn border-black hover:bg-amber-300"
               >
                 <FcGoogle size={20} />

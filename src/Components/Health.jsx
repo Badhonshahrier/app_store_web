@@ -12,7 +12,7 @@ const Health = ({ data }) => {
         {healthApps.map((app) => (
             <Link to={`/app-details/${app.id}`}>
           <div key={app.id} className="card bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500
-p-4 shadow rounded-2xl">
+p-4 shadow rounded-2xl transition-transform hover:scale-105 cursor-pointer">
             <img
               src={app.thumbnail}
               alt={app.name}

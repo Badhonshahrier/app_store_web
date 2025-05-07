@@ -20,7 +20,7 @@ const Productivity = ({ data }) => {
           <div
             key={app.id}
             className="card bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
-p-4 shadow rounded-2xl"
+p-4 shadow rounded-2xl transition-transform hover:scale-105 cursor-pointer"
           >
             <img
               src={app.thumbnail}

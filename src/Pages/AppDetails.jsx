@@ -64,7 +64,7 @@ const AppDetails = () => {
                 className="border p-4 rounded-lg shadow-sm bg-gray-50"
               >
                 <p className="font-semibold">{review.user}</p>
-                <p>Rating: ⭐ {review.rating}</p>
+                <p>Rating: {review.rating}</p>
                 <p className="text-gray-700">{review.comment}</p>
               </div>
             ))

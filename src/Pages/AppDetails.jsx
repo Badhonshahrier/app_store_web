@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { useParams, useLoaderData } from "react-router";
 import ReviewSection from "../Components/ReviewSection";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const AppDetails = () => {
   const {user}=use(AuthContext)
@@ -24,6 +25,11 @@ const app = data.find((item) => item.id === id);
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>AppDetails - AppStore</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <h1 className="text-3xl font-bold text-center">{name}</h1>
 
       <img src={banner} className="w-full object-cover rounded-xl shadow-lg" />

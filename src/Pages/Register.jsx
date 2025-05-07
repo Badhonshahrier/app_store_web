@@ -5,6 +5,7 @@ import { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 const Register = () => {
   const navigate = useNavigate();
   const { creatUser, setUser, googleSignIn, userProfile } = use(AuthContext);
@@ -13,10 +14,8 @@ const Register = () => {
       .then((result) => {
         toast.success("Google sign in successful!")
         navigate("/login");
-        console.log(result);
       })
       .catch((error) => {
-        console.log(error);
       });
   };
   const handleRegister = (e) => {
@@ -48,6 +47,7 @@ const Register = () => {
     console.log({ name, email, photo, password });
     creatUser(email, password)
       .then((result) => {
+        toast.success("Successfully Register Your Account")
         navigate("/login");
         const user = result.user;
 
@@ -71,6 +71,11 @@ const Register = () => {
   return (
     <>
       <div className="bg-amber-100">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Register - AppStore</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <Navbar></Navbar>
         <div className="card bg-base-100 mx-auto max-w-sm my-20 shadow-2xl">
           <div className="card-body ">

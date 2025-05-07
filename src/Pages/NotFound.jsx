@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router";
 
 const NotFound = () => {
@@ -6,6 +7,11 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-amber-50 flex flex-col items-center justify-center px-4">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>ErrorPage - AppStore</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <img
         className="w-full max-w-md mb-6"
         src="https://i.ibb.co.com/VYB4V79V/3828537.jpg"

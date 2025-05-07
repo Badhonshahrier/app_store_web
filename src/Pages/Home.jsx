@@ -6,12 +6,19 @@ import Health from "../Components/health";
 import Education from "../Components/Education";
 import Treanding from "../Components/Treanding";
 import ExtraSection from "../Components/ExtraSection/ExtraSection";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const data = useLoaderData();
 
+
   return (
     <>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home - AppStore</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <Slider></Slider>
       <Treanding data={data}></Treanding>
       <Productivity data={data}></Productivity>

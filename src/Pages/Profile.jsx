@@ -2,12 +2,18 @@ import React, { use } from "react";
 import Navbar from "../Navbar/Navbar";
 import { AuthContext } from "../Provider/AuthProvider";
 import Footer from "../Footer/Footer";
+import { Helmet } from "react-helmet";
 
 const Profile = () => {
   const { user } = use(AuthContext);
 
   return (
     <>
+    <Helmet>
+                <meta charSet="utf-8" />
+                <title>Profile - AppStore</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <Navbar />
       <div className="min-h-screen bg-amber-50 flex flex-col items-center justify-center py-10">
         <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md text-center">

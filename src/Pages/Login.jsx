@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../firebase.init";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -54,6 +55,11 @@ const Login = () => {
   return (
     <>
       <Navbar></Navbar>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>login - AppStore</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div className="bg-gray-700 min-h-[calc(100vh-64px)] pt-30">
         <div className="card bg-base-200 max-w-sm mx-auto  shadow-2xl">
           <h1 className="text-center pt-3 font-bold text-2xl">

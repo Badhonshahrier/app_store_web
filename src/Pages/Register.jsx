@@ -16,8 +16,7 @@ const Register = () => {
       .then((result) => {
         navigate("/");
       })
-      .catch((error) => {
-      });
+      .catch((error) => {});
   };
   const handleRegister = (e) => {
     e.preventDefault();
@@ -48,13 +47,13 @@ const Register = () => {
     console.log({ name, email, photo, password });
     creatUser(email, password)
       .then((result) => {
-         Swal.fire({
-                  title: "Logged in!",
-                  text: "Successfully Register Your Account",
-                  icon: "success",
-                  confirmButtonText: "OK",
-                  confirmButtonColor: "#3085d6",
-                });
+        Swal.fire({
+          title: "Logged in!",
+          text: "Successfully Register Your Account",
+          icon: "success",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#3085d6",
+        });
         navigate("/");
         const user = result.user;
 
@@ -78,14 +77,15 @@ const Register = () => {
   return (
     <>
       <div className="bg-amber-100">
-      <Helmet>
-                <meta charSet="utf-8" />
-                <title>Register - AppStore</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Register - AppStore</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
         <Navbar></Navbar>
-        <div className="card bg-base-100 mx-auto max-w-sm my-20 shadow-2xl">
-          <div className="card-body ">
+
+        <div className="card bg-base-100 mx-auto max-w-sm shadow-2xl mt-12 mb-12">
+          <div className="card-body">
             <h1 className="text-center font-bold text-2xl text-teal-400">
               Register Here!
             </h1>
@@ -143,9 +143,10 @@ const Register = () => {
             </form>
           </div>
         </div>
+
+        <Footer></Footer>
+        <ToastContainer />
       </div>
-      <Footer></Footer>
-      <ToastContainer />
     </>
   );
 };

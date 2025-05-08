@@ -31,6 +31,13 @@ const Login = () => {
 
     login(email, password)
       .then((result) => {
+         Swal.fire({
+                          title: "Logged in!",
+                          text: "Successfully Login Your Account",
+                          icon: "success",
+                          confirmButtonText: "OK",
+                          confirmButtonColor: "#3085d6",
+                        });
         navigate("/");
        
         console.log(result.user);

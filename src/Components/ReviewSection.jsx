@@ -13,8 +13,8 @@ const ReviewSection = ({ initialReviews = [], isInstalled }) => {
 
     setReviews([
       {
-        user: user.displayName ,
-        photoURL: user.photoURL ,
+        user: user.displayName,
+        photoURL: user.photoURL,
         comment: reviewText,
         rating: reviewRating,
         time: new Date().toLocaleString(),
@@ -77,32 +77,28 @@ const ReviewSection = ({ initialReviews = [], isInstalled }) => {
           User Reviews
         </h2>
         <div className="space-y-4 w-full">
-          {reviews.length>0  ? (
-            reviews.map((review, index) => (
-              <div
-                key={index}
-                className="border p-4 rounded-lg shadow-sm bg-gray-50"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <img
-                    src={review.photoURL}
-                    alt={review.user}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold">{review.user}</p>
-                    <p className="text-sm text-gray-500">{review.time}</p>
-                  </div>
-                  <span className="ml-auto flex items-center text-lg gap-2">
-                    <GoStarFill color="gold" size={20} /> {review.rating}
-                  </span>
+          {reviews.map((review, index) => (console.log(review),
+            <div
+              key={index}
+              className="border p-4 rounded-lg shadow-sm bg-gray-50"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <img
+                  src={review.photoURL}
+                  alt={review.user}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-semibold">{review.user}</p>
+                  <p className="text-sm text-gray-500">{review.time}</p>
                 </div>
-                <p className="text-gray-700">{review.comment}</p>
+                <span className="ml-auto flex items-center text-lg gap-2">
+                  <GoStarFill color="gold" size={20} /> {review.rating}
+                </span>
               </div>
-            ))
-          ) : (
-            <p className="text-gray-500 text-center">No reviews yet.</p>
-          )}
+              <p className="text-gray-700">{review.comment}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

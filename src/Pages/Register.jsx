@@ -6,6 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
+
 const Register = () => {
   const navigate = useNavigate();
   const { creatUser, setUser, googleSignIn, userProfile } = use(AuthContext);
@@ -47,8 +49,14 @@ const Register = () => {
     console.log({ name, email, photo, password });
     creatUser(email, password)
       .then((result) => {
-        toast.success("Successfully Register Your Account")
-        navigate("/login");
+         Swal.fire({
+                  title: "Logged in!",
+                  text: "Successfully Register Your Account",
+                  icon: "success",
+                  confirmButtonText: "OK",
+                  confirmButtonColor: "#3085d6",
+                });
+        navigate("/");
         const user = result.user;
 
         console.log(user);

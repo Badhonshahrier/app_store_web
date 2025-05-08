@@ -7,6 +7,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../firebase.init";
 import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const Login = () => {
     login(email, password)
       .then((result) => {
         navigate("/");
-
+       
         console.log(result.user);
       })
       .catch((error) => {
@@ -45,10 +46,10 @@ const Login = () => {
 
     sendPasswordResetEmail(auth, email)
       .then(() => {
-        alert("a password reset email send to your email")
+        alert("a password reset email send to your email");
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       });
   };
 
@@ -56,10 +57,10 @@ const Login = () => {
     <>
       <Navbar></Navbar>
       <Helmet>
-                <meta charSet="utf-8" />
-                <title>login - AppStore</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
+        <meta charSet="utf-8" />
+        <title>login - AppStore</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="bg-gray-700 min-h-[calc(100vh-64px)] pt-30">
         <div className="card bg-base-200 max-w-sm mx-auto  shadow-2xl">
           <h1 className="text-center pt-3 font-bold text-2xl">
@@ -97,7 +98,10 @@ const Login = () => {
               </button>
 
               <div>
-                <p onClick={handleForgot} className="font-bold cursor-pointer">
+                <p
+                  onClick={() => handleForgot}
+                  className="font-bold cursor-pointer"
+                >
                   Forgot password?
                 </p>
               </div>

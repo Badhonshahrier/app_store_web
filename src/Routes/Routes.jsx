@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
       {
         path: "/contactUs",
         Component: ContactUs,
-        loader: () => fetch("/contactUs.json"),
+        loader: () => fetch("/contactUS.json"),
       },
     ],
   },

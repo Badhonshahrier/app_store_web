@@ -28,7 +28,7 @@ const Productivity = ({ data }) => {
         {productivityApps.map((app) => (
           <Link to={`/app-details/${app.id}`}>
             <div
-              onClick={handleClick(app.id)}
+              onClick={()=>handleClick(app.id)}
               key={app.id}
               className="card bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
             p-4 shadow rounded-2xl transition-transform hover:scale-105 cursor-pointer"

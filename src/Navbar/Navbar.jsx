@@ -37,6 +37,48 @@ const Navbar = () => {
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className=" lg:hidden">
+            <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 space-x-10">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-blue-500 underline text-lg font-bold"
+                    : "text-lg font-bold"
+                }
+              >
+                Apps
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to={user ? "/profile" : "/login"}
+                className={({ isActive }) =>
+                  isActive && user
+                    ? "text-blue-500 underline text-lg font-bold"
+                    : "text-lg font-bold"
+                }
+              >
+                My Profile
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to={user ? "/contactUs" : "/login"}
+                className={({ isActive }) =>
+                  isActive && user
+                    ? "text-blue-500 underline text-lg font-bold"
+                    : "text-lg font-bold"
+                }
+              >
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+        </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"

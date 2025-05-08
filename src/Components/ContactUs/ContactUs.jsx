@@ -1,42 +1,42 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData } from "react-router"
 
 const ContactUs = () => {
   const data = useLoaderData();
-  const { title, subtitle, message, email, phone, support_hours, category } =
-    data;
 
   return (
-    <div
-      className="hero min-h-screen w-11/12 mx-auto my-20"
-      style={{
-        backgroundImage: "url(https://i.ibb.co.com/1J8j1c31/5124556.jpg)",
-      }}
-    >
-      <div className="hero-overlay"></div>
-      <div className="hero-content text-neutral-content text-center">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">{data.title}</h1>
-          <p className="mb-5">{data.subtitle}</p>
-          <p className="mb-5">{data.message}</p>
-          <p className="mb-5">
-            <strong>Email: </strong>
-            <a href={`mailto:${data.email}`} className="text-blue-400">
-              {data.email}
-            </a>
-          </p>
-          <p className="mb-5">
-            <strong>Phone: </strong>
-            <a href={`tel:${phone}`} className="text-blue-400">
-              {phone}
-            </a>
-          </p>
-          <p className="mb-5">
-            <strong>Support Hours: </strong>
-            {support_hours}
-          </p>
-          <button className="btn btn-primary">Get Started</button>
-        </div>
+    <div className="w-11/12 mx-auto my-10">
+      <h2 className="text-4xl font-bold text-center mb-10 text-purple-600">
+        Contact Us
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {data.map((contact, index) => (
+          <div
+            key={index}
+            className="card bg-base-200 shadow-lg p-6 rounded-2xl transition-transform hover:scale-105"
+          >
+            <div
+              className=""
+              
+            >
+              <img className=" w-full object-cover bg-center rounded-lg mb-4" src={contact.image} alt="" />
+            </div>
+            <h3 className="text-2xl font-bold text-blue-600 mb-2">{contact.title}</h3>
+            <p className="mb-2 text-lg font-bold  text-gray-700">{contact.subtitle}</p>
+            <p className="mb-4">{contact.message}</p>
+            <p className="mb-1">
+              <strong>Email: </strong>
+              <a href={`mailto:${contact.email}`} className="text-blue-500 underline">
+                {contact.email}
+              </a>
+            </p>
+            <p className="mb-4">
+              <strong>Phone: </strong>
+              {contact.phone}
+            </p>
+            <button className="btn btn-primary text-white w-full">Support Now</button>
+          </div>
+        ))}
       </div>
     </div>
   );

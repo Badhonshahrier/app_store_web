@@ -26,7 +26,7 @@ const Productivity = ({ data }) => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {productivityApps.map((app) => (
-          <Link to={`/app-details/${app.id}`}>
+
             <div
               onClick={()=>handleClick(app.id)}
               key={app.id}
@@ -42,13 +42,13 @@ const Productivity = ({ data }) => {
                 <FaArrowCircleRight />
                 {app.name}
               </h3>
-              <p>
-                <div className="flex items-center gap-1">
+              <div>
+                <p className="flex items-center gap-1">
               
                  <GoStarFill size={20} color="gold" />
                   {app.rating}
-                </div>
-              </p>
+                </p>
+              </div>
               <div className="">
                 <p className="flex items-center gap-1">
                   <FaCloudDownloadAlt color="red" size={20} />
@@ -56,7 +56,7 @@ const Productivity = ({ data }) => {
                 </p>
               </div>
             </div>
-          </Link>
+    
         ))}
       </div>
     </div>

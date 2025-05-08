@@ -44,10 +44,10 @@ const Productivity = ({ data }) => {
               </h3>
               <p>
                 <div className="flex items-center gap-1">
-                  {" "}
-                  <GoStarFill size={20} color="gold" />
+              
+                 <GoStarFill size={20} color="gold" />
                   {app.rating}
-                </div>{" "}
+                </div>
               </p>
               <div className="">
                 <p className="flex items-center gap-1">

@@ -6,6 +6,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Profile from "../Pages/Profile";
 import NotFound from "../Pages/NotFound";
+import ContactUs from "../Components/ContactUs/ContactUs";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ export const router = createBrowserRouter([
         Component: AppDetails,
         loader: () => fetch("/appStore.json"),
       },
+      {
+        path: "/contactUs",
+        Component: ContactUs,
+        loader: () => fetch("/contactUs.json"),
+      },
     ],
   },
   {
@@ -43,6 +49,7 @@ export const router = createBrowserRouter([
     path: "/profile",
     Component: Profile,
   },
+
   {
     path: "/*",
     Component: NotFound,

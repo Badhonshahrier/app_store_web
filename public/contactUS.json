@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Contact Us",
+        "subtitle": "Got a question or need help?",
+        "message": "If you have any questions or need assistance with app usage, features, or anything related to our platform, don’t hesitate to get in touch. Our support team is always ready to help.",
+        "email": "help@appstoreplatform.com",
+        "phone": "+1-800-234-5678",
+        "support_hours": "Monday to Friday, 9:00 AM - 6:00 PM",
+        "category": "General Inquiry"
+    },
+    {
+        "title": "Refund / Claim Request",
+        "subtitle": "Issue with a purchase or claim?",
+        "message": "If you've faced issues with a paid app or transaction, our support team is here to help you with refund requests, claims, or other payment concerns. Please provide as many details as possible to process your request.",
+        "email": "claims@appstoreplatform.com",
+        "phone": "+1-800-345-6789",
+        "support_hours": "Monday to Friday, 10:00 AM - 5:00 PM",
+        "category": "Refund/Claim"
+    },
+    {
+        "title": "Technical Support",
+        "subtitle": "Need help with technical issues?",
+        "message": "If you're experiencing bugs, crashes, or technical difficulties with an app, we're here to assist you. Please provide detailed information so we can resolve the issue as quickly as possible.",
+        "email": "techsupport@appstoreplatform.com",
+        "phone": "+1-800-456-7890",
+        "support_hours": "Monday to Friday, 8:00 AM - 7:00 PM",
+        "category": "Technical Support"
+    },
+    {
+        "title": "App Purchase Inquiry",
+        "subtitle": "Questions about your purchase?",
+        "message": "If you have concerns about a recent app purchase, billing details, or need help with your order, feel free to contact our support team. We’ll get back to you promptly with the necessary assistance.",
+        "email": "purchaseinquiries@appstoreplatform.com",
+        "phone": "+1-800-567-8901",
+        "support_hours": "Monday to Friday, 9:00 AM - 5:00 PM",
+        "category": "App Purchase"
+    }
+]

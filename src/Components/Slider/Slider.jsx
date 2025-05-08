@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 const Slider = () => {
   const images = [
     "https://i.ibb.co.com/QvVCcFr3/programing-hero.png",
-    "https://i.ibb.co.com/TB2z4WJP/forest.png",
-    "https://i.ibb.co.com/Myj8NJ8X/Duolingo-AIM-1024x576.jpg",
-    "https://i.ibb.co.com/gbp88jwD/notion.png",
+    "https://i.ibb.co.com/0R5Xr4vR/1-9-Wz-J1r-Rpuc-LURg-U-QLWs-Aw.jpg",
+    "https://i.ibb.co.com/nNLgmZp6/MB-Khan-Academy-001-Cover-2000x1126.jpg",
+    "https://i.ibb.co.com/jkr4xjHB/todoist-new-logo-red.webp",
   ];
 
   const [current, setCurrent] = useState(0);

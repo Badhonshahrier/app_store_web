@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const handleLogout = () => {
     logOut()
       .then(() => {
@@ -18,7 +18,7 @@ const Navbar = () => {
           confirmButtonText: "OK",
           confirmButtonColor: "#3085d6",
         });
-        navigate("/login")
+        navigate("/login");
       })
       .catch((error) => {
         console.log(error);
@@ -63,64 +63,47 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-10">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 underline text-lg font-bold"
-                  : "text-lg font-bold"
-              }
-            >
-              <li>Apps</li>
-            </NavLink>
-            {user ? (
+            <li>
               <NavLink
-                to="/profile"
+                to="/"
                 className={({ isActive }) =>
                   isActive
                     ? "text-blue-500 underline text-lg font-bold"
                     : "text-lg font-bold"
                 }
               >
-                <li>My Profile</li>
+                Apps
               </NavLink>
-            ) : (
+            </li>
+
+            <li>
               <NavLink
-                to="/login"
+                to={user ? "/profile" : "/login"}
                 className={({ isActive }) =>
-                  isActive
+                  isActive && user
                     ? "text-blue-500 underline text-lg font-bold"
                     : "text-lg font-bold"
                 }
               >
-                <li>My Profile</li>
+                My Profile
               </NavLink>
-            )}
-            {user ? (
+            </li>
+
+            <li>
               <NavLink
+                to={user ? "/contactUs" : "/login"}
                 className={({ isActive }) =>
-                  isActive
+                  isActive && user
                     ? "text-blue-500 underline text-lg font-bold"
                     : "text-lg font-bold"
                 }
-                to="/contactUs"
               >
                 Contact Us
               </NavLink>
-            ) : (
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-blue-500 underline text-lg font-bold"
-                    : "text-lg font-bold"
-                }
-                to="/login"
-              >
-                Contact Us
-              </NavLink>
-            )}
+            </li>
           </ul>
         </div>
+
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center space-x-3">
@@ -155,125 +138,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// import React, { useContext } from "react";
-// import NavbarLogo from "../assets/farhat-altaf-2X1CbJ8kVL0-unsplash.jpg";
-// import { Link, NavLink } from "react-router"; 
-// import { AuthContext } from "../Provider/AuthProvider";
-// import Swal from "sweetalert2";
-
-// const Navbar = () => {
-//   const { user, logOut } = useContext(AuthContext)
-
-//   const handleLogout = () => {
-//     logOut()
-//       .then(() => {
-//         Swal.fire({
-//           title: "Logged out!",
-//           text: "You have been logged out successfully.",
-//           icon: "success",
-//           confirmButtonText: "OK",
-//           confirmButtonColor: "#3085d6",
-//         });
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//         Swal.fire({
-//           title: "Error!",
-//           text: "Something went wrong during logout.",
-//           icon: "error",
-//           confirmButtonText: "OK",
-//         });
-//       });
-//   };
-
-//   return (
-//     <div className="bg-base-200">
-//       <div className="navbar w-11/12 mx-auto shadow-sm">
-//         <div className="navbar-start">
-//           <img
-//             src={NavbarLogo}
-//             className="w-12 h-12 object-cover rounded-full"
-//             alt="Logo"
-//           />
-//           <p className="ml-2 text-xl font-bold text-green-500">AppStore</p>
-//         </div>
-
-//         <div className="navbar-center hidden lg:flex">
-//           <ul className="menu menu-horizontal px-1 space-x-10">
-//             <li>
-//               <NavLink
-//                 to="/"
-//                 className={({ isActive }) =>
-//                   isActive
-//                     ? "text-blue-500 underline text-lg font-bold"
-//                     : "text-lg font-bold"
-//                 }
-//               >
-//                 Apps
-//               </NavLink>
-//             </li>
-
-//             <li>
-//               <NavLink
-//                 to={user ? "/profile" : "/login"}
-//                 className={({ isActive }) =>
-//                   isActive
-//                     ? "text-blue-500 underline text-lg font-bold"
-//                     : "text-lg font-bold"
-//                 }
-//               >
-//                 My Profile
-//               </NavLink>
-//             </li>
-
-//             <li>
-//               <NavLink
-//                 to={user ? "/contactUs" : "/login"}
-//                 className={({ isActive }) =>
-//                   isActive
-//                     ? "text-blue-500 underline text-lg font-bold"
-//                     : "text-lg font-bold"
-//                 }
-//               >
-//                 Contact Us
-//               </NavLink>
-//             </li>
-//           </ul>
-//         </div>
-
-//         <div className="navbar-end">
-//           {user ? (
-//             <div className="flex items-center space-x-3">
-//               <div
-//                 className="tooltip tooltip-bottom"
-//                 data-tip={user.displayName || user.email}
-//               >
-//                 <img
-//                   src={user.photoURL}
-//                   alt="profile"
-//                   className="w-10 h-10 rounded-full object-cover"
-//                 />
-//               </div>
-//               <button
-//                 onClick={handleLogout}
-//                 className="btn p-0 px-7 rounded-2xl text-xl font-bold bg-amber-400 hover:bg-green-500"
-//               >
-//                 Logout
-//               </button>
-//             </div>
-//           ) : (
-//             <Link to="/login">
-//               <button className="btn p-0 px-7 rounded-2xl text-xl font-bold bg-amber-400 hover:bg-green-500">
-//                 Login
-//               </button>
-//             </Link>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-

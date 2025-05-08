@@ -14,8 +14,7 @@ const Register = () => {
   const handleGoggleRegister = () => {
     googleSignIn()
       .then((result) => {
-        toast.success("Google sign in successful!")
-        navigate("/login");
+        navigate("/");
       })
       .catch((error) => {
       });

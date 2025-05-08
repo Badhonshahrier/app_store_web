@@ -13,7 +13,8 @@ const ContactUs = () => {
         {data.map((contact, index) => (
           <div
             key={index}
-            className="card bg-base-200 shadow-lg p-6 rounded-2xl transition-transform hover:scale-105"
+            className="card bg-gradient-to-r from-purple-300 via-lime-200 to-pink-300
+ shadow-lg p-6 rounded-2xl transition-transform hover:scale-105"
           >
             <div
               className=""
@@ -26,7 +27,7 @@ const ContactUs = () => {
             <p className="mb-4">{contact.message}</p>
             <p className="mb-1">
               <strong>Email: </strong>
-              <a href={`mailto:${contact.email}`} className="text-blue-500 underline">
+              <a className="text-blue-500 underline">
                 {contact.email}
               </a>
             </p>

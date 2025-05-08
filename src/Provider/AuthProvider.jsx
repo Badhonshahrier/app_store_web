@@ -40,6 +40,10 @@ const userProfile=(updateUser)=>{
   return updateProfile(auth.currentUser,updateUser)
 }
 
+// update profile
+
+
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);

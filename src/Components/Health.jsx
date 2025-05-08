@@ -28,7 +28,7 @@ const Health = ({ data }) => {
             <div
             onClick={()=>{handleClick(app.id)}}
               key={app.id}
-              className="card bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500
+              className="card bg-gradient-to-r from-teal-300 via-teal-500 to-green-500
 p-4 shadow rounded-2xl transition-transform hover:scale-105 cursor-pointer"
             >
               <img

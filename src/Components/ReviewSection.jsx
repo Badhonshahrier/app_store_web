@@ -2,20 +2,19 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { GoStarFill } from "react-icons/go";
 
-const ReviewSection = ({ initialReviews = [] }) => {
+const ReviewSection = ({ initialReviews = [], isInstalled }) => {
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState(initialReviews);
   const [reviewText, setReviewText] = useState("");
   const [reviewRating, setReviewRating] = useState(0);
-  
 
   const handleSubmit = () => {
-    if (!reviewText || reviewRating === 0 || !user) return;
+    if (!reviewText || reviewRating === 0 || !user || !isInstalled) return;
 
     setReviews([
       {
-        user: user.displayName || "Anonymous",
-        photoURL: user.photoURL || "https://i.ibb.co/2nL6FfS/default-user.png",
+        user: user.displayName ,
+        photoURL: user.photoURL ,
         comment: reviewText,
         rating: reviewRating,
         time: new Date().toLocaleString(),
@@ -29,43 +28,56 @@ const ReviewSection = ({ initialReviews = [] }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-semibold mt-6 text-amber-600 mb-2">Submit a Review</h2>
+      <h2 className="text-2xl font-semibold mt-6 text-amber-600 mb-2">
+        Submit a Review
+      </h2>
 
       {user ? (
-        <div className="space-y-2">
-          <div className="flex space-x-1">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <span
-                key={star}
-                className={`text-3xl cursor-pointer ${
-                  star <= reviewRating ? "text-yellow-400" : "text-gray-400"
-                }`}
-                onClick={() => setReviewRating(star)}
-              >
-                <GoStarFill />
-              </span>
-            ))}
+        isInstalled ? (
+          <div className="space-y-2">
+            <div className="flex space-x-1">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <span
+                  key={star}
+                  className={`text-3xl cursor-pointer ${
+                    star <= reviewRating ? "text-yellow-400" : "text-gray-400"
+                  }`}
+                  onClick={() => setReviewRating(star)}
+                >
+                  <GoStarFill />
+                </span>
+              ))}
+            </div>
+            <textarea
+              className="w-full h-40 border p-2 rounded"
+              placeholder="Write your review..."
+              value={reviewText}
+              onChange={(e) => setReviewText(e.target.value)}
+            />
+            <button
+              onClick={handleSubmit}
+              className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
+            >
+              Submit Review
+            </button>
           </div>
-          <textarea
-            className="w-full h-40 border p-2 rounded"
-            placeholder="Write your review..."
-            value={reviewText}
-            onChange={(e) => setReviewText(e.target.value)}
-          />
-          <button
-            onClick={handleSubmit}
-            className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
-          >
-            Submit Review
-          </button>
-        </div>
+        ) : (
+          <p className="text-red-500 text-lg">
+            Please install the app before submitting a review.
+          </p>
+        )
       ) : (
-        <p className="text-gray-500 text-lg">Please log in to submit a review.</p>
+        <p className="text-gray-500 text-lg">
+          Please log in to submit a review.
+        </p>
       )}
+
       <div className="flex flex-col items-center mt-6">
-        <h2 className="text-2xl text-center font-semibold mb-2">User Reviews</h2>
+        <h2 className="text-2xl text-center font-semibold mb-2">
+          User Reviews
+        </h2>
         <div className="space-y-4 w-full">
-          {reviews.length > 0 ? (
+          {reviews.length>0  ? (
             reviews.map((review, index) => (
               <div
                 key={index}
@@ -81,7 +93,8 @@ const ReviewSection = ({ initialReviews = [] }) => {
                     <p className="font-semibold">{review.user}</p>
                     <p className="text-sm text-gray-500">{review.time}</p>
                   </div>
-                  <span className="ml-auto flex items-center text-lg gap-2"> <GoStarFill color="gold"  size={20}/> {review.rating}
+                  <span className="ml-auto flex items-center text-lg gap-2">
+                    <GoStarFill color="gold" size={20} /> {review.rating}
                   </span>
                 </div>
                 <p className="text-gray-700">{review.comment}</p>

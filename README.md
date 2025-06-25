@@ -9,7 +9,7 @@ A dynamic App Store web application where users can explore, add, and manage app
 
 ## 📸 Screenshot
 
-![App Screenshot](screenshot.png)
+![App Screenshot](https://i.ibb.co/GQfRk8pC/Screenshot-10.png)
 
 ---
 
